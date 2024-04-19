@@ -53,3 +53,8 @@ Route::get('myself/{name}/{bb}/{tb}', function ($name, $bb, $tb) {
     . "keterangan:$ket<br>"
     ;
 });
+
+// route optional parameter
+Route::get('myname/{nama?}',function($a = "Nazwa"){
+    return "my name is $a";
+}); 
