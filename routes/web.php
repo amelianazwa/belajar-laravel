@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Post;
+use App\Models\Barang;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,3 +60,16 @@ Route::get('myself/{name}/{bb}/{tb}', function ($name, $bb, $tb) {
 Route::get('myname/{nama?}',function($a = "Nazwa"){
     return "my name is $a";
 }); 
+
+// menampilkan data dari database
+
+Route::get('/testmodel', function () {
+$data = Post::all();
+return $data;
+});
+
+// 
+Route::get('/testbarang', function () {
+    $data = Barang::all();
+    return $data;
+    });
