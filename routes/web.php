@@ -17,6 +17,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\MerekController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\ProductController;
 
 
 /*
@@ -49,9 +50,9 @@ Route::get('animals', function() {
 });
 
 // rout parameter
-Route::get('product/{name}', function ($name) {
-    return "product:$name";
-});
+// Route::get('product/{name}', function ($name) {
+//     return "product:$name";
+// });
 
 // tugas nama, berat badan, tinggi badan 
 Route::get('myself/{name}/{bb}/{tb}', function ($name, $bb, $tb) {
@@ -167,3 +168,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // 
 Route::resource('brand', BrandController::class);
+// 
+Route::resource('product', ProductController::class);
